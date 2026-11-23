@@ -1,0 +1,381 @@
+{
+    "geode": "5.11.2",
+    "gd": {
+        "win": "2.2081",
+        "mac": "2.2081",
+        "android": "2.2081",
+        "ios": "2.2081"
+    },
+    "id": "custom.editor-button-shortcuts",
+    "name": "Editor Button Shortcuts",
+    "version": "v1.0.0",
+    "developer": "You",
+    "description": "Keyboard shortcuts for the editor buttons, with labels showing each key.",
+    "tags": [
+        "editor",
+        "utility",
+        "enhancement"
+    ],
+    "settings": {
+        "title-general": {
+            "type": "title",
+            "name": "General"
+        },
+        "enabled": {
+            "type": "bool",
+            "name": "Enable Shortcuts",
+            "description": "Turns every shortcut from this mod on or off.",
+            "default": true
+        },
+        "block-vanilla": {
+            "type": "bool",
+            "name": "Override Vanilla Keys",
+            "description": "When a shortcut is used, stop the vanilla editor from also reacting to that key (for example Q/E rotating objects).",
+            "default": true
+        },
+        "title-labels": {
+            "type": "title",
+            "name": "Button Labels"
+        },
+        "show-labels": {
+            "type": "bool",
+            "name": "Show Labels",
+            "description": "Shows the shortcut key on each button.",
+            "default": true
+        },
+        "label-position": {
+            "type": "string",
+            "name": "Label Position",
+            "description": "Where the label sits on the button.",
+            "default": "Bottom Right",
+            "one-of": [
+                "Bottom Right",
+                "Bottom Left",
+                "Top Right",
+                "Top Left",
+                "Center"
+            ]
+        },
+        "label-scale": {
+            "type": "float",
+            "name": "Label Size",
+            "description": "Size of the label text.",
+            "default": 0.35,
+            "min": 0.1,
+            "max": 1.0,
+            "control": {
+                "slider": true,
+                "slider-step": 0.05,
+                "input": true,
+                "arrows": true,
+                "arrow-step": 0.05
+            }
+        },
+        "label-opacity": {
+            "type": "int",
+            "name": "Label Opacity",
+            "description": "Opacity of the label text (0 to 255).",
+            "default": 230,
+            "min": 0,
+            "max": 255,
+            "control": {
+                "slider": true,
+                "input": true
+            }
+        },
+        "label-color": {
+            "type": "color",
+            "name": "Label Color",
+            "description": "Color of the label text.",
+            "default": [
+                255,
+                255,
+                255
+            ]
+        },
+        "title-actions-1": {
+            "type": "title",
+            "name": "Right Side Buttons"
+        },
+        "edit-object": {
+            "type": "keybind",
+            "name": "Edit Object",
+            "description": "Opens the Edit Object menu for the selected object.",
+            "default": [
+                "E"
+            ],
+            "category": "editor"
+        },
+        "edit-group": {
+            "type": "keybind",
+            "name": "Edit Group",
+            "description": "Opens the Edit Group menu.",
+            "default": [
+                "G"
+            ],
+            "category": "editor"
+        },
+        "deselect": {
+            "type": "keybind",
+            "name": "Deselect",
+            "description": "Deselects all objects.",
+            "default": [
+                "Q"
+            ],
+            "category": "editor"
+        },
+        "edit-special": {
+            "type": "keybind",
+            "name": "Edit Extras",
+            "description": "Opens the Edit Special / Extras menu.",
+            "default": [
+                "X"
+            ],
+            "category": "editor"
+        },
+        "edit-hsv": {
+            "type": "keybind",
+            "name": "Edit HSV",
+            "description": "Opens the HSV menu.",
+            "default": [
+                "H"
+            ],
+            "category": "editor"
+        },
+        "copy-paste": {
+            "type": "keybind",
+            "name": "Copy + Paste",
+            "description": "Duplicates the selection.",
+            "default": [
+                "B"
+            ],
+            "category": "editor"
+        },
+        "copy": {
+            "type": "keybind",
+            "name": "Copy",
+            "description": "Copies the selection.",
+            "default": [
+                "C"
+            ],
+            "category": "editor"
+        },
+        "paste": {
+            "type": "keybind",
+            "name": "Paste",
+            "description": "Pastes the clipboard.",
+            "default": [
+                "V"
+            ],
+            "category": "editor"
+        },
+        "copy-values": {
+            "type": "keybind",
+            "name": "Copy Values",
+            "description": "Copies object values.",
+            "default": [
+                "Shift+C"
+            ],
+            "category": "editor"
+        },
+        "paste-state": {
+            "type": "keybind",
+            "name": "Paste State",
+            "description": "Pastes object state.",
+            "default": [
+                "Shift+V"
+            ],
+            "category": "editor"
+        },
+        "paste-color": {
+            "type": "keybind",
+            "name": "Paste Color",
+            "description": "Pastes object color.",
+            "default": [
+                "Alt+V"
+            ],
+            "category": "editor"
+        },
+        "go-to-layer": {
+            "type": "keybind",
+            "name": "Go To Layer",
+            "description": "Goes to the selected object's layer.",
+            "default": [
+                "L"
+            ],
+            "category": "editor"
+        },
+        "title-actions-2": {
+            "type": "title",
+            "name": "Toolbar & Other Buttons"
+        },
+        "link": {
+            "type": "keybind",
+            "name": "Link",
+            "description": "Links the selected objects.",
+            "default": [
+                "K"
+            ],
+            "category": "editor"
+        },
+        "unlink": {
+            "type": "keybind",
+            "name": "Unlink",
+            "description": "Unlinks the selected objects.",
+            "default": [
+                "Shift+K"
+            ],
+            "category": "editor"
+        },
+        "swipe": {
+            "type": "keybind",
+            "name": "Toggle Swipe",
+            "description": "Toggles swipe.",
+            "default": [
+                "T"
+            ],
+            "category": "editor"
+        },
+        "rotate": {
+            "type": "keybind",
+            "name": "Toggle Rotate",
+            "description": "Toggles the rotate control.",
+            "default": [
+                "R"
+            ],
+            "category": "editor"
+        },
+        "free-move": {
+            "type": "keybind",
+            "name": "Toggle Free Move",
+            "description": "Toggles free move.",
+            "default": [
+                "F"
+            ],
+            "category": "editor"
+        },
+        "snap": {
+            "type": "keybind",
+            "name": "Toggle Snap",
+            "description": "Toggles snap.",
+            "default": [
+                "N"
+            ],
+            "category": "editor"
+        },
+        "playtest": {
+            "type": "keybind",
+            "name": "Playtest",
+            "description": "Starts or pauses a playtest.",
+            "default": [
+                "P"
+            ],
+            "category": "editor"
+        },
+        "stop-playtest": {
+            "type": "keybind",
+            "name": "Stop Playtest",
+            "description": "Stops the playtest.",
+            "default": [
+                "Shift+P"
+            ],
+            "category": "editor"
+        },
+        "music": {
+            "type": "keybind",
+            "name": "Play Music",
+            "description": "Plays or stops the level music.",
+            "default": [
+                "M"
+            ],
+            "category": "editor"
+        },
+        "zoom-in": {
+            "type": "keybind",
+            "name": "Zoom In",
+            "description": "Zooms in. Can be held.",
+            "default": [
+                "Z"
+            ],
+            "category": "editor"
+        },
+        "zoom-out": {
+            "type": "keybind",
+            "name": "Zoom Out",
+            "description": "Zooms out. Can be held.",
+            "default": [
+                "Shift+Z"
+            ],
+            "category": "editor"
+        },
+        "next-layer": {
+            "type": "keybind",
+            "name": "Next Layer",
+            "description": "Goes to the next editor layer. Can be held.",
+            "default": [
+                "]"
+            ],
+            "category": "editor"
+        },
+        "prev-layer": {
+            "type": "keybind",
+            "name": "Previous Layer",
+            "description": "Goes to the previous editor layer. Can be held.",
+            "default": [
+                "["
+            ],
+            "category": "editor"
+        },
+        "all-layers": {
+            "type": "keybind",
+            "name": "All Layers",
+            "description": "Shows all layers.",
+            "default": [
+                "\\"
+            ],
+            "category": "editor"
+        },
+        "undo": {
+            "type": "keybind",
+            "name": "Undo",
+            "description": "Undo button. Unbound by default, since vanilla already has Ctrl+Z.",
+            "default": [],
+            "category": "editor"
+        },
+        "redo": {
+            "type": "keybind",
+            "name": "Redo",
+            "description": "Redo button. Unbound by default, since vanilla already has Ctrl+Y.",
+            "default": [],
+            "category": "editor"
+        },
+        "delete-selected": {
+            "type": "keybind",
+            "name": "Delete Selected",
+            "description": "Trash button. Unbound by default, since vanilla already has Delete.",
+            "default": [],
+            "category": "editor"
+        },
+        "build-mode": {
+            "type": "keybind",
+            "name": "Build Tab",
+            "description": "Switches to the Build tab. Unbound by default, vanilla uses 1.",
+            "default": [],
+            "category": "editor"
+        },
+        "edit-mode": {
+            "type": "keybind",
+            "name": "Edit Tab",
+            "description": "Switches to the Edit tab. Unbound by default, vanilla uses 2.",
+            "default": [],
+            "category": "editor"
+        },
+        "delete-mode": {
+            "type": "keybind",
+            "name": "Delete Tab",
+            "description": "Switches to the Delete tab. Unbound by default, vanilla uses 3.",
+            "default": [],
+            "category": "editor"
+        }
+    }
+}
